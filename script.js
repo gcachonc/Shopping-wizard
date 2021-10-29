@@ -6,6 +6,7 @@ window.addEventListener("hashchange", () =>{
 switch(winHash){
     case "#/":
         console.log("Estamos en home")
+        bodyElement.appendChild(crearHome());
         break;
     case "#/product":
         //bodyElement.removeChild(divElement);
@@ -20,13 +21,7 @@ switch(winHash){
 
 function crearHome(){
         const views = `
-        <ul>
-                <li>Val 1</li>
-                <li>Val 2</li>
-                <li>Val 3</li>
-        </ul>
-        <p>precio</p>
-    <a href="#/adrres"><button id = "product"> buy</button></a>
+        
                 `;
         divElement.innerHTML = views;
         console.log(divElement)

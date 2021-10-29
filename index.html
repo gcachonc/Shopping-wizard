@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="/script.js" defer></script>
+    <script src="/home-page.js" defer></script>
+    
+</head>
+<body id= "Bodyprueba">
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <p><a href="#" >LOGO</a> </p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#/" >Product</a></li>
+                    <li><a href="#/" >Profile</a></li>
+                    <li><a href="#/adrres" >Form</a></li>
+                    <li><a href="#/shipping" >Shipping</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class = "fotos-pequeñas">
+
+        </div>
+        <div class="carousel">
+            <button class = "carousel-button" id="retroceder"><i class="fas fa-chevron-left"></i></button>
+            <div id="imagen"></div>
+            <button class = "carousel-button" id="avanzar"><i class="fas fa-chevron-right"></i></button>
+            <div class = "prices-container">
+                <h2>Price</h2>
+                <p>14,999.00$</p>
+                <form class = "cilinder-select">
+                    <select name="engine-capacity" id="engine-capacity">
+                        <option value="900cc">900cc</option>
+                        <option value="1200cc">1200cc</option>
+                    </select>
+                    <input type="submit" value="Submit" onclick="cilinderValue()">
+                </form>
+                <div class = "button-colors">
+                    <button type="button" onclick="fotosBlancas()">blanco</button>
+                    <button type="button" onclick="fotosNegras()">negra</button>
+                    <button type="button" onclick="fotosRojas()">roja</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
