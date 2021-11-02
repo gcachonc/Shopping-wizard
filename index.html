@@ -10,6 +10,7 @@
     <title>Document</title>
     <script src="/script.js" defer></script>
     <script src="/home-page.js" defer></script>
+    <script src="/productpage.js" defer></script>
     
 </head>
 <body id= "Bodyprueba">
@@ -97,46 +98,84 @@
             <input type="radio" name="send" value="free"> Free shipment (72H)<br>
             <input type="radio" name="send" value="extra"> Extra shipping (48H)<b> 4,99</b><br>
             <input type="radio" name="send" value="premium"> Premium (24H) <b>9,99</b>
-          </label>
-      <div>
+        </label>
+        <div>
         <button >Clear form</button>
         <button type="submit">Next</button>
     </div>
-      </form>
-     
-    
+    </form>
     <!--     <script src="script.js"></script>-->
 
-    
- <!-- parte de juan -->
- <nav class="buyState">
+
+<!-- Shipping------------------------------------------------------------------------------->
+
+    <section class="shipping" id="contendorOcultarShipping">
+        <div class="shipping2" >
+            <h3 class="purchase" > Shipping type</h3>
+            <div class="formContainer">
+                <input type="radio" name="send" value="free"> Free shipment (72H)
+            </div>
+            <div class="formContainer">
+                <input type="radio" name="send" value="extra"> Extra shipping (48H)4,99
+            </div>
+            <div class="formContainer">
+                <input type="radio" name="send" value="premium"> Premium (24H) <b>9,99</b>
+            </div>
+        </div>
+        <div class="mensageDiv">
+            <p class="TextNorm">Write the message</p>
+            <textarea name="Message" id="messagetext" cols="35" rows="15" ></textarea>
+        </div>
+        <div class="containerDropp">
+            <p>Add your image</p>
+            <input type="file">
+        </div>
+        <div>
+            <button type="submit" id="btnShipping">Next</button>
+            <button >Clear form</button>
+        </div>
+    </section>
+
+<!-- Finish ------------------------------------------------------------------------------->
+
+<!-- <nav class="buyState">
     <h3>Proflie</h3>
     <h3>Address</h3>
     <h3>Shipping</h3>
-    <h3>Finish</h3>
+    <h3>Finish</h3> -->
 </nav>
 <div class="productContainer">
 <div class="descriptiomProduct">
     <div class="tituloh2">
-        <h2>Your Purchase</h2>
+        <h2 class="purchase">Your Purchase</h2>
     </div>
     <div class="intDescriptionProduct">
         <div class="divimg" >
             <img src="https://i.ibb.co/zS5xDy1/blanca-Delantera.jpg" alt="modelo moto" srcset="">
-            
         </div>
-        <div>
-            <h4>Nodelo Moto</h4>
-            <p> color</p>
-            <p>Cilindrada</p>
-            <p>ENTREGA ESTIMADA</p>
-            <P>dias de entrega</P>
+        <div class="descriptionContainer">
+            <h4 class="description">Modelo Moto</h4>
+            <p class="description"> color</p>
+            <p class="description">variable color</p>
+            <p class="description">Cilindrada</p>
+            <p class="description">variable color</p>
+            <p class="description">ENTREGA ESTIMADA</p>
+            <P class="description">Variable fecha entrega</P>
         </div>
     </div>
 </div>
 <div class="descriptionBuy">
-    <p>Your order</p>
-    <p>Price</p>
+    <h3 class="order"> Your order</h3>
+    <div class="separador"></div>
+    <p class="pOrderL">Your Selection</p>
+    <p class="pOrderR">Variable Moto</p>
+    <p class="pOrderL">Price</p>
+    <p class="pOrderR">Variable Precio</p>
+    <p class="pOrderL">Your sipping</p>
+    <p class="pOrderR">Variable de entrega</p>
+    <div class="separador"></div>
+    <p class="pOrderL" id="total">Total</p>
+    <p class="pOrderR" id="total">Variable Price</p>
     <p id="countdown"> atrdy</p>
 </div>
 </div>
