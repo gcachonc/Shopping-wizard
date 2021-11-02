@@ -57,44 +57,78 @@
     <!-- parte vlad -->
     <form method="post" action="./script.js" target="_blank">
         <div>
+            <label>Username</label><br>
+            <input type="text" id="username" pattern="[a-z]{5,20}"required autocomplete >
+        </div>
+        <div>
+            <label>Email</label><br>
+            <input type="email" id="email"   required autocomplete>
+        </div>
+        <div>
+            <label>Password</label><br>
+            <input type="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
+             required >
+        </div>
+        <div>
+            <label>Confirm Password</label><br>
+            <input type="password" id="confirm-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$" required>
+        </div>
+       
+      <div>
+        <button >Clear form</button>
+        <button type="submit">Next</button>
+    </div>
+      </form>
+
+    <form method="post" action="./script.js" target="_blank">
+        <div>
             <label>First name</label><br>
-            <input type="text" id="firstName" required autocomplete>
+            <input type="text" id="firstName" pattern="[a-z]{1,20}" required autocomplete >
         </div>
         <div>
             <label>Last name</label><br>
-            <input type="text" id="lastName" required autocomplete>
+            <input type="text" id="lastName" pattern="[a-z]{1,20}" required autocomplete>
         </div>
         <div>
             <label>Birthday</label><br>
-            <input type="text" id="birthday" required>
+            <input type="date" id="birthday" required>
         </div>
         <div>
             <label>Address 1</label><br>
-            <input type="text" id="address1" required autocomplete>
+            <input type="text" id="address1" pattern="{1,50}"required autocomplete>
         </div>
         <div>
             <label>Address 2</label><br>
-            <input type="text" id="address2">
+            <input type="text" id="address2" pattern="{1,50}">
         </div>
         <div>
             <label>Postal code</label><br>
-            <input type="text" id="postalCode" required autocomplete>
+            <input type="number" id="postalCode" pattern="[0-9]{1,5}" required autocomplete>
         </div>
         <div>
             <label>Country</label><br>
             <select name="country" id="country"  required>
-                <option>Spain</option>
-                <option>France</option>
-                <option>Island</option>
-                </select>
+                <option>Andorra</option>
+                <option>España</option>
+                <option>Francia</option>
+                <option>Alemania</option>
+                <option>Grecia</option>
+            </select>
         </div>
         <div>
             <label>Phone</label><br>
-            <input type="text" id="phone" required autocomplete pattern="">
+            <select name="country" id="country"  required>
+                <option>AND</option>
+                <option>ESP</option>
+                <option>FRA</option>
+                <option>DEU</option>
+                <option>GRC</option>
+            </select>
+            <input type="text" id="phone" pattern="{1,9}" required autocomplete>
         </div>
         <label>
             Shipping type:<br>
-            <input type="radio" name="send" value="free"> Free shipment (72H)<br>
+            <input type="radio" name="send" value="free" required> Free shipment (72H)<br>
             <input type="radio" name="send" value="extra"> Extra shipping (48H)<b> 4,99</b><br>
             <input type="radio" name="send" value="premium"> Premium (24H) <b>9,99</b>
           </label>
@@ -106,7 +140,6 @@
      
     
     <!--     <script src="script.js"></script>-->
-
     
  <!-- parte de juan -->
  <nav class="buyState">

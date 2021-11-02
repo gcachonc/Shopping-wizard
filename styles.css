@@ -56,7 +56,13 @@ nav ul li a{
 nav ul li a:hover{
     color: #444;
 }
-
+input:required:invalid{
+   /*  border-color:red; */
+}
+input[type="text"]:invalid~label {
+    color: red;
+  }
+  
 /* main page product
 
 .main-contain{
