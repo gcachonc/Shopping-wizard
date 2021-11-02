@@ -57,54 +57,71 @@ nav ul li a:hover{
     color: #444;
 }
 
-/* main page product
-
-.main-contain{
-    display:flex;
-}
-.carousel{
-    width:100px;
-    height:100px;
-    
-}
-.carousel img{
-width: 100%;
-}
-.big-img{
-    /* display:block; */
-   /* margin-left:10%;
-}
-.info{
-    width:400px;
-    height: 600px;
-    background-color: red;
-} */
 
 /* css carrousel*/
 .carousel {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 50%;
+    height: 340px;
+    margin: 50px auto;
     display: flex;
     justify-content: space-between;
 }
 #imagen {
-    width: 100%;
+    width: 60%;
     height: 340px;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
 }
 .carousel-button{
     background-color: #ffffff;
     border: none;
     width: 10%;
 }
+.fotos-pequeñas{
+    width: 10%;
+    height: 340px;
+    display: grid;
+}
+.img-small{
+    height: 85px;
+}
+
+.button-colors{
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#blancos{
+    background-color: white;
+}
+#rojos{
+    background-color: red;
+}
+#negros{
+    background-color: black;
+}
+#buy-button{
+    border-radius: 25%;
+    background-color: var(--color-terciario);;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*css lista de precio y opciones */
 .prices-container{
     display: grid;
+    width: 150px;
 }
-.button-colors{
+.color-select{
     display: flex;
+
 }
 .cilinder-select{
     display: grid;
+    grid-row-gap: 5px;
 }
