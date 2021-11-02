@@ -29,10 +29,22 @@
         </div>
     </header>
     <main>
-        <div class = "fotos-pequeñas">
-
-        </div>
         <div class="carousel">
+            <div class = "fotos-pequeñas">
+                <a onmouseover ="hoverImage1()" onmouseout="finisHover1()">
+                    <img class = "img-small" id = "img_1" src= "https://i.ibb.co/1rRPtMR/blanca-Derecha.jpg" alt="moto de frente">
+                </a>
+                <a onmouseover ="hoverImage2()" onmouseout="finisHover2()">
+                    <img class = "img-small" id = "img_2" src= "https://i.ibb.co/zS5xDy1/blanca-Delantera.jpg" alt="moto de frente">
+                </a>
+                <a onmouseover ="hoverImage3()" onmouseout="finisHover3()">
+                    <img class = "img-small" id = "img_3" src= "https://i.ibb.co/yRcrtgn/blanca-Izquierda.jpg" alt="moto de frente">
+                </a>
+                <a onmouseover ="hoverImage4()" onmouseout="finisHover4()">
+                    <img class = "img-small" id = "img_4" src= "https://i.ibb.co/86W7bX1/blanca-Trasera.jpg" alt="moto de frente">
+                </a>
+    
+            </div>
             <button class = "carousel-button" id="retroceder"><i class="fas fa-chevron-left"></i></button>
             <div id="imagen"></div>
             <button class = "carousel-button" id="avanzar"><i class="fas fa-chevron-right"></i></button>
@@ -46,10 +58,13 @@
                     </select>
                     <input type="submit" value="Submit" onclick="cilinderValue()">
                 </form>
-                <div class = "button-colors">
-                    <button type="button" onclick="fotosBlancas()">blanco</button>
-                    <button type="button" onclick="fotosNegras()">negra</button>
-                    <button type="button" onclick="fotosRojas()">roja</button>
+                <div class="color-select">
+                    <button class = "button-colors" id = "blancos" type="button" onclick="fotosBlancas()"></button>
+                    <button class = "button-colors" id = "negros" type="button" onclick="fotosNegras()"></button>
+                    <button class = "button-colors" id = "rojos" type="button" onclick="fotosRojas()"></button>
+                </div>
+                <div class = "center">
+                    <button id="buy-button" type= "button">Comprar</button>
                 </div>
             </div>
         </div>
