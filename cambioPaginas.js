@@ -26,10 +26,22 @@
 
 //displays
 
-var displayCilindrada = document.getElementById("displayCilindrada")
+var displayCilindrada = document.getElementById("displayCilindrada");
+var displayColor = document.getElementById("displayColor");
+var displayPrecio = document.getElementById("displayPrecio");
+var price = "";
 
 function displayVariables(){
   displayCilindrada.innerHTML = cilindrada;
+  displayColor.innerHTML = color;
+  if (cilindrada == "900cc"){
+    price = "14.999$";
+  }
+  else if(cilindrada == "1200cc"){
+    price = "16.999$";
+  }
+  displayPrecio.innerHTML = price;
+
 }
 
 
@@ -37,8 +49,13 @@ function displayVariables(){
 var cilindrada = "";
 var comprar = document.getElementById("buy-button")
 comprar.addEventListener("click",cambioClase1)
+var color = "";
 
 function cambioClase1 (){
+  if (color == ""){
+    alert ("no has seleccionado color")
+    return;
+  }
   const product = document.getElementById("product-page");
   const profile = document.getElementById("profile-page");
   const tituloProduct = document.getElementById("titProduct");
@@ -49,6 +66,7 @@ function cambioClase1 (){
   tituloProfile.style.color ="black";
   cilindrada = document.getElementById("engineCapacity").value;
   console.log(cilindrada);
+  console.log(color);
 }
 var nextProfile = document.getElementById("next-profile");
 nextProfile.addEventListener("click",cambioClase2);

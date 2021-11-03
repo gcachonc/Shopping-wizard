@@ -67,6 +67,8 @@ function fotosBlancas(){
     img2.src = 'https://i.ibb.co/zS5xDy1/blanca-Delantera.jpg';
     img3.src = 'https://i.ibb.co/yRcrtgn/blanca-Izquierda.jpg';
     img4.src = 'https://i.ibb.co/86W7bX1/blanca-Trasera.jpg';
+
+    color = "blanca";
 }
 function fotosNegras(){
     IMAGENES = [
@@ -81,6 +83,7 @@ function fotosNegras(){
     img2.src = 'https://i.ibb.co/9NKJtjc/negra-Delantera.jpg';
     img3.src = 'https://i.ibb.co/nDc2pnP/negra-Izquierda.jpg';
     img4.src = 'https://i.ibb.co/vLR1PQJ/negra-Trasera.jpg';
+    color = "negra";
 }
 function fotosRojas(){
     IMAGENES = [
@@ -96,6 +99,7 @@ function fotosRojas(){
     img3.src = 'https://i.ibb.co/kJYmkrY/roja-Izquierda.jpg';
     img4.src = 'https://i.ibb.co/4W0P5td/roja-Trasera.jpg';
 
+    color = "roja";
 }
 
 /* funciones para el hover de las imagenes pequeñas */
