@@ -7,7 +7,10 @@
 header {
     width: 100%;
     background: #EB7F12;
-    height: 90px;
+    height: 100px;
+    border-radius: 0 0 85% 85% / 30%;
+    background-position: 50% 50%; 
+    background-image: url(https://www.vagabondesss.com/wp-content/uploads/2016/07/motorcycle-road-trip-tips.jpg);
 }
 #titProduct{
     color: black;
@@ -19,15 +22,14 @@ header {
     margin: auto;
 }
 .logo{
-    width: 10%;
-    height: 90px;
+    width: 8%;
     /*background: blue;*/
     float: left;
     padding-top: 10px;
     box-sizing: border-box;
     text-align: center;
 }
-.logo p a{
+.logo p a img{
     color: black;
     font-size: 40px;
     margin: auto;
