@@ -25,15 +25,31 @@
 
 
 //displays
-
-var displayCilindrada = document.getElementById
-("displayCilindrada")
+var displayCilindrada = document.getElementById("displayCilindrada");
+var displayColor = document.getElementById("displayColor");
+var displayPrecio = document.getElementById("displayPrecio");
+var price = "";
 var radiovalue ="";
-var displayRadioValue = document.getElementById("displayShipping")
+var displayRadioValue = document.getElementById("displayShipping");
+var displayMaxShipping = document.getElementById("displayMaxShipping")
+var fecha = new Date;
+
+
 
 function displayVariables(){
   displayCilindrada.innerHTML = cilindrada;
-  displayRadioValue.innerHTML = radiovalue;
+  displayColor.innerHTML = color;
+  if (cilindrada == "900cc"){
+    price = "14.999$";
+  }
+  else if(cilindrada == "1200cc"){
+    price = "16.999$";
+  }
+  displayPrecio.innerHTML = price;
+  fecha.setHours(fecha.getHours() + parseFloat(radiovalue));
+  displayRadioValue.innerHTML = fecha.toDateString() + " " + "09:00";
+  displayMaxShipping.innerHTML = fecha.toDateString() + " " + fecha.getHours() + (fecha.getMinutes()<10?':0':':') + fecha.getMinutes();
+
 }
 
 
@@ -41,8 +57,13 @@ function displayVariables(){
 var cilindrada = "";
 var comprar = document.getElementById("buy-button")
 comprar.addEventListener("click",cambioClase1)
+var color = "";
 
 function cambioClase1 (){
+  if (color == ""){
+    alert ("no has seleccionado color")
+    return;
+  }
   const product = document.getElementById("product-page");
   const profile = document.getElementById("profile-page");
   const tituloProduct = document.getElementById("titProduct");
@@ -53,6 +74,7 @@ function cambioClase1 (){
   tituloProfile.style.color ="black";
   cilindrada = document.getElementById("engineCapacity").value;
   console.log(cilindrada);
+  console.log(color);
 }
 var nextProfile = document.getElementById("next-profile");
 nextProfile.addEventListener("click",cambioClase2);
@@ -95,7 +117,6 @@ function cambioClase4 (){
   tituloShipping.style.color ="white";
   tituloFinish.style.color ="black";
   radiovalue = document.querySelector('input[name="send"]:checked').value;
-
   // document.getElementById('radioBtn1').value;
   console.log(cilindrada);
   console.log(radiovalue);
