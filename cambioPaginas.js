@@ -21,15 +21,34 @@
 //       document.getElementById("countdown").innerHTML = "EXPIRED";
 //     }
 //   }, 1000);
+//
 
+
+//displays
+
+var displayCilindrada = document.getElementById("displayCilindrada")
+
+function displayVariables(){
+  displayCilindrada.innerHTML = cilindrada;
+}
+
+
+
+var cilindrada = "";
 var comprar = document.getElementById("buy-button")
 comprar.addEventListener("click",cambioClase1)
 
 function cambioClase1 (){
   const product = document.getElementById("product-page");
   const profile = document.getElementById("profile-page");
+  const tituloProduct = document.getElementById("titProduct");
+  const tituloProfile = document.getElementById("titProfile");
   product.className = "ocultar";
   profile.className = "mostrar";
+  tituloProduct.style.color ="white";
+  tituloProfile.style.color ="black";
+  cilindrada = document.getElementById("engineCapacity").value;
+  console.log(cilindrada);
 }
 var nextProfile = document.getElementById("next-profile");
 nextProfile.addEventListener("click",cambioClase2);
@@ -37,8 +56,12 @@ nextProfile.addEventListener("click",cambioClase2);
 function cambioClase2 (){
   const profile = document.getElementById("profile-page");
   const address = document.getElementById("address-page");
+  const tituloProfile = document.getElementById("titProfile");
+  const tituloForm = document.getElementById("titForm");
   profile.className = "ocultar";
   address.className = "mostrar";
+  tituloProfile.style.color ="white";
+  tituloForm.style.color ="black";
 }
 
 var shippingNext = document.getElementById("Next-Address");
@@ -47,8 +70,12 @@ shippingNext.addEventListener("click",cambioClase3);
 function cambioClase3 (){
   const address = document.getElementById("address-page");
   const shipping = document.getElementById("shipping-page");
+  const tituloForm = document.getElementById("titForm");
+  const tituloShipping = document.getElementById("titShipping");
   address.className = "ocultar";
   shipping.className = "mostrar";
+  tituloForm.style.color ="white";
+  tituloShipping.style.color ="black";
 }
 
 var shippingNext = document.getElementById("btnShipping");
@@ -57,6 +84,12 @@ shippingNext.addEventListener("click",cambioClase4);
 function cambioClase4 (){
   const shipping = document.getElementById("shipping-page");
   const finish = document.getElementById("finish-page");
+  const tituloShipping = document.getElementById("titShipping");
+  const tituloFinish = document.getElementById("titFinish");
   shipping.className = "ocultar";
   finish.className = "mostrar";
+  tituloShipping.style.color ="white";
+  tituloFinish.style.color ="black";
+  console.log(cilindrada);
+  displayVariables();
 }

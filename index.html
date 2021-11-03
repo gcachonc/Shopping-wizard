@@ -11,6 +11,7 @@
     <script src="/script.js" defer></script>
     <script src="/home-page.js" defer></script>
     <script src="/cambioPaginas.js" defer></script>
+    <script src="/variables.js" defer></script>
     
 </head>
 <body id= "Bodyprueba">
@@ -21,10 +22,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#/" >Product</a></li>
-                    <li><a href="#/" >Profile</a></li>
-                    <li><a href="#/adrres" >Form</a></li>
-                    <li><a href="#/shipping" >Shipping</a></li>
+                    <li><a href="#/" id="titProduct" >Product</a></li>
+                    <li><a href="#/" id="titProfile">Profile</a></li>
+                    <li><a href="#/adrres"  id="titForm">Form</a></li>
+                    <li><a href="#/shipping"  id="titShipping" >Shipping</a></li>
+                    <li><a href="#/Finish" id="titFinish">Finish</a></li>
                 </ul>
             </nav>
         </div>
@@ -50,13 +52,13 @@
             <button class = "carousel-button" id="avanzar"><i class="fas fa-chevron-right"></i></button>
             <div class = "prices-container">
                 <h2>Price</h2>
-                <p>14,999.00$</p>
+                <p>Desde 14,999.00$</p>
                 <form class = "cilinder-select">
-                    <select name="engine-capacity" id="engine-capacity">
-                        <option value="900cc">900cc</option>
-                        <option value="1200cc">1200cc</option>
+                    <select name="engine-capacity" id ="engineCapacity">
+                        <option value="900cc" >900cc (14.999$)</option>
+                        <option value="1200cc">1200cc (16.999$)</option>
                     </select>
-                    <input type="submit" value="Submit" onclick="cilinderValue()">
+                    <input type="submit" value="Submit">
                 </form>
                 <div class="color-select">
                     <button class = "button-colors" id = "blancos" type="button" onclick="fotosBlancas()"></button>
@@ -71,7 +73,7 @@
     </section>
     <!-- profile page -->
     <section id = "profile-page" class="ocultar">
-        <form method="post" action="./script.js" target="_blank" id="usernm">
+        <form method="post" action="./script.js" target="_blank" class ="usernm">
             <div>
                 <label>Username</label><br>
                 <input type="text" id="username" class="form" pattern="[a-z]{5,20}"required autocomplete >
@@ -91,13 +93,13 @@
            
           <div>
             <button >Clear form</button>
-            <button type="submit" id = "next-profile">Next</button>
+            <button type="submit" id ="next-profile">Next</button>
         </div>
           </form>
         </section>
     <!-- Address page -->
     <section id= "address-page" class = "ocultar">
-        <form method="post" action="./script.js" target="_blank" id="usernm">
+        <form method="post" action="./script.js" target="_blank" class = "usernm">
             <div>
                 <label>First name</label><br>
                 <input type="text" id="firstName" pattern="[a-z]{1,20}" class="form"  required autocomplete >
@@ -134,7 +136,7 @@
             </div>
             <div>
                 <label>Phone</label><br>
-                <select name="country" id="country" class="form"  required>
+                <select name="countryPhone" id="countryPhone" class="form"  required>
                     <option>AND</option>
                     <option>ESP</option>
                     <option>FRA</option>
@@ -192,7 +194,8 @@
                     <p class="description"> color</p>
                     <p class="description">variable color</p>
                     <p class="description">Cilindrada</p>
-                    <p class="description">variable color</p>
+                    <div id = "displayCilindrada"></div>
+                    <!-- <p class="description">variable color</p> -->
                     <p class="description">ENTREGA ESTIMADA</p>
                     <P class="description">Variable fecha entrega</P>
                 </div>
