@@ -33,6 +33,10 @@ var radiovalue ="";
 var displayRadioValue = document.getElementById("displayShipping");
 var displayMaxShipping = document.getElementById("displayMaxShipping")
 var fecha = new Date;
+var displayShippingPrice = document.getElementById("displayShippingPrice");
+var shippingPrice = "";
+var totalPrice = "";
+var displayTotalPrice = document.getElementById("displayTotalPrice");
 
 
 
@@ -40,15 +44,28 @@ function displayVariables(){
   displayCilindrada.innerHTML = cilindrada;
   displayColor.innerHTML = color;
   if (cilindrada == "900cc"){
-    price = "14.999$";
+    price = "14999";
   }
   else if(cilindrada == "1200cc"){
-    price = "16.999$";
+    price = "16999";
   }
-  displayPrecio.innerHTML = price;
+  displayPrecio.innerHTML = price.toLocaleString('en-US');
   fecha.setHours(fecha.getHours() + parseFloat(radiovalue));
   displayRadioValue.innerHTML = fecha.toDateString() + " " + "09:00";
   displayMaxShipping.innerHTML = fecha.toDateString() + " " + fecha.getHours() + (fecha.getMinutes()<10?':0':':') + fecha.getMinutes();
+
+  if (radiovalue == "72"){
+    shippingPrice = "0$";
+  }
+  else if (radiovalue == "48"){
+    shippingPrice = "49.99$";
+  }
+  else if (radiovalue == "24"){
+    shippingPrice = "99.99$";
+  }
+  displayShippingPrice.innerHTML = shippingPrice;
+  totalPrice = parseFloat(price) + parseFloat(shippingPrice);
+  displayTotalPrice.innerHTML = totalPrice.toLocaleString('en-US');
 
 }
 
