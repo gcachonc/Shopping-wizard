@@ -71,60 +71,60 @@
     </section>
     <!-- profile page -->
     <section id = "profile-page" class="ocultar">
-        <form method="post" action="./script.js" target="_blank">
+        <form method="post" action="./script.js" target="_blank" id="usernm">
             <div>
                 <label>Username</label><br>
-                <input type="text" id="username" pattern="[a-z]{5,20}"required autocomplete >
+                <input type="text" id="username" class="form" pattern="[a-z]{5,20}"required autocomplete >
             </div>
             <div>
                 <label>Email</label><br>
-                <input type="email" id="email"   required autocomplete>
+                <input type="email" id="email" class="form"  required autocomplete>
             </div>
             <div>
                 <label>Password</label><br>
-                <input type="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
-                 required >
+                <input type="password" id="password" class="form" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required >
             </div>
             <div>
                 <label>Confirm Password</label><br>
-                <input type="password" id="confirm-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$" required>
+                <input type="password" id="confirm-password" class="form" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required>
             </div>
-            <div>
+           
+          <div>
             <button >Clear form</button>
-            <button type="submit" id = "next-profile" >Next</button>
-            </div>
-        </form>
-    </section>
+            <button type="submit" id = "next-profile">Next</button>
+        </div>
+          </form>
+        </section>
     <!-- Address page -->
     <section id= "address-page" class = "ocultar">
-        <form method="post" action="./script.js" target="_blank">
+        <form method="post" action="./script.js" target="_blank" id="usernm">
             <div>
                 <label>First name</label><br>
-                <input type="text" id="firstName" pattern="[a-z]{1,20}" required autocomplete >
+                <input type="text" id="firstName" pattern="[a-z]{1,20}" class="form"  required autocomplete >
             </div>
             <div>
                 <label>Last name</label><br>
-                <input type="text" id="lastName" pattern="[a-z]{1,20}" required autocomplete>
+                <input type="text" id="lastName" pattern="[a-z]{1,20}" class="form"  required autocomplete>
             </div>
             <div>
                 <label>Birthday</label><br>
-                <input type="date" id="birthday" required>
+                <input type="date" id="birthday" class="form"  required>
             </div>
             <div>
                 <label>Address 1</label><br>
-                <input type="text" id="address1" pattern="{1,50}"required autocomplete>
+                <input type="text" id="address1" pattern="{1,50}" class="form"  required autocomplete>
             </div>
             <div>
                 <label>Address 2</label><br>
-                <input type="text" id="address2" pattern="{1,50}">
+                <input type="text" id="address2" pattern="{1,50}" class="form" >
             </div>
             <div>
                 <label>Postal code</label><br>
-                <input type="number" id="postalCode" pattern="[0-9]{1,5}" required autocomplete>
+                <input type="number" id="postalCode" pattern="[0-9]{1,5}" class="form"  required autocomplete>
             </div>
             <div>
                 <label>Country</label><br>
-                <select name="country" id="country"  required>
+                <select name="country" id="country" class="form"   required>
                     <option>Andorra</option>
                     <option>España</option>
                     <option>Francia</option>
@@ -134,27 +134,21 @@
             </div>
             <div>
                 <label>Phone</label><br>
-                <select name="country" id="country"  required>
+                <select name="country" id="country" class="form"  required>
                     <option>AND</option>
                     <option>ESP</option>
                     <option>FRA</option>
                     <option>DEU</option>
                     <option>GRC</option>
                 </select>
-                <input type="text" id="phone" pattern="{1,9}" required autocomplete>
+                <input type="text" id="phone" pattern="{1,9}" class="form"  required autocomplete>
             </div>
-            <label>
-                Shipping type:<br>
-                <input type="radio" name="send" value="free" required> Free shipment (72H)<br>
-                <input type="radio" name="send" value="extra"> Extra shipping (48H)<b> 4,99</b><br>
-                <input type="radio" name="send" value="premium"> Premium (24H) <b>9,99</b>
-            </label>
             <div>
                 <button >Clear form</button>
                 <button type="submit" id="Next-Address">Next</button>
             </div>
         </form>
-    </section>
+        </section>
 <!-- Shipping------------------------------------------------------------------------------->
     <section id ="shipping-page" class="ocultar">
         <div class="shipping2" >
