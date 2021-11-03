@@ -12,6 +12,7 @@
     <script src="/home-page.js" defer></script>
     <script src="/cambioPaginas.js" defer></script>
     <script src="/variables.js" defer></script>
+    <script src="/shippingAndClock.js" defer></script>
     
 </head>
 <body id= "Bodyprueba">
@@ -154,15 +155,20 @@
 <!-- Shipping------------------------------------------------------------------------------->
     <section id ="shipping-page" class="ocultar">
         <div class="shipping2" >
-            <h3 class="purchase" > Shipping type</h3>
+            <!-- <h3 class="purchase" > Shipping type</h3>
+                <select name="" id="radioBtn"  class="ocultar">
+                    <input type="radio" name="send" value="72"  > Free shipment (72H)
+                    <input type="radio" name="send" value="48"> Extra shipping (48H)4,99
+                    <input type="radio" name="send" value="24"> Premium (24H) <b>9,99</b>
+                </select> -->
             <div class="formContainer">
-                <input type="radio" name="send" value="free"> Free shipment (72H)
+                <input type="radio" name="send" value="72" id="radioBtn1" > Free shipment (72H)
             </div>
             <div class="formContainer">
-                <input type="radio" name="send" value="extra"> Extra shipping (48H)4,99
+                <input type="radio" name="send" value="48"id="radioBtn2" > Extra shipping (48H)4,99
             </div>
             <div class="formContainer">
-                <input type="radio" name="send" value="premium"> Premium (24H) <b>9,99</b>
+                <input type="radio" name="send" value="24"id="radioBtn3" > Premium (24H) <b>9,99</b>
             </div>
         </div>
         <div class="mensageDiv">
@@ -197,7 +203,8 @@
                     <div id = "displayCilindrada"></div>
                     <!-- <p class="description">variable color</p> -->
                     <p class="description">ENTREGA ESTIMADA</p>
-                    <P class="description">Variable fecha entrega</P>
+                    <div id = "displayShipping"></div>
+                    <!-- <P class="description">Variable fecha entrega</P> -->
                 </div>
             </div>
         </div>

@@ -26,10 +26,14 @@
 
 //displays
 
-var displayCilindrada = document.getElementById("displayCilindrada")
+var displayCilindrada = document.getElementById
+("displayCilindrada")
+var radiovalue ="";
+var displayRadioValue = document.getElementById("displayShipping")
 
 function displayVariables(){
   displayCilindrada.innerHTML = cilindrada;
+  displayRadioValue.innerHTML = radiovalue;
 }
 
 
@@ -90,6 +94,10 @@ function cambioClase4 (){
   finish.className = "mostrar";
   tituloShipping.style.color ="white";
   tituloFinish.style.color ="black";
+  radiovalue = document.querySelector('input[name="send"]:checked').value;
+
+  // document.getElementById('radioBtn1').value;
   console.log(cilindrada);
+  console.log(radiovalue);
   displayVariables();
 }
