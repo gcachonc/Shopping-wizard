@@ -10,7 +10,7 @@
     <title>Document</title>
     <script src="/script.js" defer></script>
     <script src="/home-page.js" defer></script>
-    <script src="/productpage.js" defer></script>
+    <script src="/cambioPaginas.js" defer></script>
     
 </head>
 <body id= "Bodyprueba">
@@ -29,7 +29,7 @@
             </nav>
         </div>
     </header>
-    <main>
+    <section id = "product-page" class = "mostrar">
         <div class="carousel">
             <div class = "fotos-pequeñas">
                 <a onmouseover ="hoverImage1()" onmouseout="finisHover1()">
@@ -44,7 +44,6 @@
                 <a onmouseover ="hoverImage4()" onmouseout="finisHover4()">
                     <img class = "img-small" id = "img_4" src= "https://i.ibb.co/86W7bX1/blanca-Trasera.jpg" alt="moto de frente">
                 </a>
-    
             </div>
             <button class = "carousel-button" id="retroceder"><i class="fas fa-chevron-left"></i></button>
             <div id="imagen"></div>
@@ -69,96 +68,95 @@
                 </div>
             </div>
         </div>
-    </main>
-    <!-- parte vlad -->
-    <form method="post" action="./script.js" target="_blank">
-        <div>
-            <label>Username</label><br>
-            <input type="text" id="username" pattern="[a-z]{5,20}"required autocomplete >
-        </div>
-        <div>
-            <label>Email</label><br>
-            <input type="email" id="email"   required autocomplete>
-        </div>
-        <div>
-            <label>Password</label><br>
-            <input type="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
-             required >
-        </div>
-        <div>
-            <label>Confirm Password</label><br>
-            <input type="password" id="confirm-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$" required>
-        </div>
-       
-      <div>
-        <button >Clear form</button>
-        <button type="submit">Next</button>
-    </div>
-      </form>
-
-    <form method="post" action="./script.js" target="_blank">
-        <div>
-            <label>First name</label><br>
-            <input type="text" id="firstName" pattern="[a-z]{1,20}" required autocomplete >
-        </div>
-        <div>
-            <label>Last name</label><br>
-            <input type="text" id="lastName" pattern="[a-z]{1,20}" required autocomplete>
-        </div>
-        <div>
-            <label>Birthday</label><br>
-            <input type="date" id="birthday" required>
-        </div>
-        <div>
-            <label>Address 1</label><br>
-            <input type="text" id="address1" pattern="{1,50}"required autocomplete>
-        </div>
-        <div>
-            <label>Address 2</label><br>
-            <input type="text" id="address2" pattern="{1,50}">
-        </div>
-        <div>
-            <label>Postal code</label><br>
-            <input type="number" id="postalCode" pattern="[0-9]{1,5}" required autocomplete>
-        </div>
-        <div>
-            <label>Country</label><br>
-            <select name="country" id="country"  required>
-                <option>Andorra</option>
-                <option>España</option>
-                <option>Francia</option>
-                <option>Alemania</option>
-                <option>Grecia</option>
-            </select>
-        </div>
-        <div>
-            <label>Phone</label><br>
-            <select name="country" id="country"  required>
-                <option>AND</option>
-                <option>ESP</option>
-                <option>FRA</option>
-                <option>DEU</option>
-                <option>GRC</option>
-            </select>
-            <input type="text" id="phone" pattern="{1,9}" required autocomplete>
-        </div>
-        <label>
-            Shipping type:<br>
-            <input type="radio" name="send" value="free" required> Free shipment (72H)<br>
-            <input type="radio" name="send" value="extra"> Extra shipping (48H)<b> 4,99</b><br>
-            <input type="radio" name="send" value="premium"> Premium (24H) <b>9,99</b>
-        </label>
-        <div>
-        <button >Clear form</button>
-        <button type="submit">Next</button>
-    </div>
-    </form>
-    <!--     <script src="script.js"></script>-->
-
-
+    </section>
+    <!-- profile page -->
+    <section id = "profile-page" class="ocultar">
+        <form method="post" action="./script.js" target="_blank">
+            <div>
+                <label>Username</label><br>
+                <input type="text" id="username" pattern="[a-z]{5,20}"required autocomplete >
+            </div>
+            <div>
+                <label>Email</label><br>
+                <input type="email" id="email"   required autocomplete>
+            </div>
+            <div>
+                <label>Password</label><br>
+                <input type="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
+                 required >
+            </div>
+            <div>
+                <label>Confirm Password</label><br>
+                <input type="password" id="confirm-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$" required>
+            </div>
+            <div>
+            <button >Clear form</button>
+            <button type="submit" id = "next-profile" >Next</button>
+            </div>
+        </form>
+    </section>
+    <!-- Address page -->
+    <section id= "address-page" class = "ocultar">
+        <form method="post" action="./script.js" target="_blank">
+            <div>
+                <label>First name</label><br>
+                <input type="text" id="firstName" pattern="[a-z]{1,20}" required autocomplete >
+            </div>
+            <div>
+                <label>Last name</label><br>
+                <input type="text" id="lastName" pattern="[a-z]{1,20}" required autocomplete>
+            </div>
+            <div>
+                <label>Birthday</label><br>
+                <input type="date" id="birthday" required>
+            </div>
+            <div>
+                <label>Address 1</label><br>
+                <input type="text" id="address1" pattern="{1,50}"required autocomplete>
+            </div>
+            <div>
+                <label>Address 2</label><br>
+                <input type="text" id="address2" pattern="{1,50}">
+            </div>
+            <div>
+                <label>Postal code</label><br>
+                <input type="number" id="postalCode" pattern="[0-9]{1,5}" required autocomplete>
+            </div>
+            <div>
+                <label>Country</label><br>
+                <select name="country" id="country"  required>
+                    <option>Andorra</option>
+                    <option>España</option>
+                    <option>Francia</option>
+                    <option>Alemania</option>
+                    <option>Grecia</option>
+                </select>
+            </div>
+            <div>
+                <label>Phone</label><br>
+                <select name="country" id="country"  required>
+                    <option>AND</option>
+                    <option>ESP</option>
+                    <option>FRA</option>
+                    <option>DEU</option>
+                    <option>GRC</option>
+                </select>
+                <input type="text" id="phone" pattern="{1,9}" required autocomplete>
+            </div>
+            <label>
+                Shipping type:<br>
+                <input type="radio" name="send" value="free" required> Free shipment (72H)<br>
+                <input type="radio" name="send" value="extra"> Extra shipping (48H)<b> 4,99</b><br>
+                <input type="radio" name="send" value="premium"> Premium (24H) <b>9,99</b>
+            </label>
+            <div>
+                <button >Clear form</button>
+                <button type="submit" id="Next-Address">Next</button>
+            </div>
+        </form>
+    </section>
 <!-- Shipping------------------------------------------------------------------------------->
-
-    <section class="shipping" id="contendorOcultarShipping">
+    <section id ="shipping-page" class="ocultar">
         <div class="shipping2" >
             <h3 class="purchase" > Shipping type</h3>
             <div class="formContainer">
@@ -186,47 +184,40 @@
     </section>
 
 <!-- Finish ------------------------------------------------------------------------------->
-
-<!-- <nav class="buyState">
-    <h3>Proflie</h3>
-    <h3>Address</h3>
-    <h3>Shipping</h3>
-    <h3>Finish</h3> -->
-</nav>
-<div class="productContainer">
-<div class="descriptiomProduct">
-    <div class="tituloh2">
-        <h2 class="purchase">Your Purchase</h2>
-    </div>
-    <div class="intDescriptionProduct">
-        <div class="divimg" >
-            <img src="https://i.ibb.co/zS5xDy1/blanca-Delantera.jpg" alt="modelo moto" srcset="">
+    <section id = "finish-page" class = "ocultar">
+        <div class="descriptiomProduct">
+            <div class="tituloh2">
+                <h2 class="purchase">Your Purchase</h2>
+            </div>
+            <div class="intDescriptionProduct">
+                <div class="divimg" >
+                    <img src="https://i.ibb.co/zS5xDy1/blanca-Delantera.jpg" alt="modelo moto" srcset="">
+                </div>
+                <div class="descriptionContainer">
+                    <h4 class="description">Modelo Moto</h4>
+                    <p class="description"> color</p>
+                    <p class="description">variable color</p>
+                    <p class="description">Cilindrada</p>
+                    <p class="description">variable color</p>
+                    <p class="description">ENTREGA ESTIMADA</p>
+                    <P class="description">Variable fecha entrega</P>
+                </div>
+            </div>
         </div>
-        <div class="descriptionContainer">
-            <h4 class="description">Modelo Moto</h4>
-            <p class="description"> color</p>
-            <p class="description">variable color</p>
-            <p class="description">Cilindrada</p>
-            <p class="description">variable color</p>
-            <p class="description">ENTREGA ESTIMADA</p>
-            <P class="description">Variable fecha entrega</P>
+        <div class="descriptionBuy">
+            <h3 class="order"> Your order</h3>
+            <div class="separador"></div>
+            <p class="pOrderL">Your Selection</p>
+            <p class="pOrderR">Variable Moto</p>
+            <p class="pOrderL">Price</p>
+            <p class="pOrderR">Variable Precio</p>
+            <p class="pOrderL">Your sipping</p>
+            <p class="pOrderR">Variable de entrega</p>
+            <div class="separador"></div>
+            <p class="pOrderL" id="total">Total</p>
+            <p class="pOrderR" id="total">Variable Price</p>
+            <p id="countdown"> atrdy</p>
         </div>
-    </div>
-</div>
-<div class="descriptionBuy">
-    <h3 class="order"> Your order</h3>
-    <div class="separador"></div>
-    <p class="pOrderL">Your Selection</p>
-    <p class="pOrderR">Variable Moto</p>
-    <p class="pOrderL">Price</p>
-    <p class="pOrderR">Variable Precio</p>
-    <p class="pOrderL">Your sipping</p>
-    <p class="pOrderR">Variable de entrega</p>
-    <div class="separador"></div>
-    <p class="pOrderL" id="total">Total</p>
-    <p class="pOrderR" id="total">Variable Price</p>
-    <p id="countdown"> atrdy</p>
-</div>
-</div>
+    </section>
 </body>
 </html>

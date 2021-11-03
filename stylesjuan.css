@@ -8,9 +8,12 @@ body{
     width: 100%;
 }
 
-.classPrueba{
+.ocultar{
     display: none;
-    color: blue;
+}
+
+.mostrar{
+    display: block;
 }
 .productContainer{
     margin-left: auto;
