@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/stylesjuan.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Document</title>
-    <script src="/script.js" defer></script>
     <script src="/home-page.js" defer></script>
     <script src="/cambioPaginas.js" defer></script>
     <script src="/variables.js" defer></script>
@@ -74,7 +73,7 @@
     </section>
     <!-- profile page -->
     <section id = "profile-page" class="ocultar">
-        <form method="post" action="./script.js" target="_blank" class ="usernm">
+        <form method="post" action="" target="_blank" class ="usernm" id = "fvalida" onsubmit="event.preventDefault();">
             <div>
                 <label>Username</label><br>
                 <input type="text" id="username" class="form" pattern="[a-z]{5,20}"required autocomplete >

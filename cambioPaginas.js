@@ -98,8 +98,16 @@ function cambioClase1 (){
 }
 var nextProfile = document.getElementById("next-profile");
 nextProfile.addEventListener("click",cambioClase2);
+var form1 = document.getElementById("fvalida")
+var username = document.getElementById("username");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+var confirmPassword = document.getElementById("confirm-password");
 
 function cambioClase2 (){
+  if ((username.value.length < 5) ||(email.value.length < 5) || (password.value.length < 5) || (confirmPassword.value != password.value)){
+    return;
+  }
   const profile = document.getElementById("profile-page");
   const address = document.getElementById("address-page");
   const tituloProfile = document.getElementById("titProfile");
@@ -109,20 +117,20 @@ function cambioClase2 (){
   tituloProfile.style.color ="white";
   tituloForm.style.color ="black";
 }
-
-var shippingNext = document.getElementById("Next-Address");
-shippingNext.addEventListener("click",cambioClase3);
-
-function cambioClase3 (){
-  const address = document.getElementById("address-page");
-  const shipping = document.getElementById("shipping-page");
-  const tituloForm = document.getElementById("titForm");
-  const tituloShipping = document.getElementById("titShipping");
-  address.className = "ocultar";
-  shipping.className = "mostrar";
-  tituloForm.style.color ="white";
-  tituloShipping.style.color ="black";
-}
+  
+  var shippingNext = document.getElementById("Next-Address");
+  shippingNext.addEventListener("click",cambioClase3);
+  
+  function cambioClase3 (){
+    const address = document.getElementById("address-page");
+    const shipping = document.getElementById("shipping-page");
+    const tituloForm = document.getElementById("titForm");
+    const tituloShipping = document.getElementById("titShipping");
+    address.className = "ocultar";
+    shipping.className = "mostrar";
+    tituloForm.style.color ="white";
+    tituloShipping.style.color ="black";
+  }
 
 var shippingNext = document.getElementById("btnShipping");
 shippingNext.addEventListener("click",cambioClase4);
