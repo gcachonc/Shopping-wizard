@@ -102,6 +102,9 @@ h1{
     margin-right:auto;
     text-align:center;
 }
+.container-profile{
+    display:grid;
+}
 button {
     display: inline-block;
     background-color: #cf8734;
