@@ -1,28 +1,30 @@
-// var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+// Set the date we're counting down to
+function reloj(){
+var countDownDate = new Date().getTime() + 300000;
 
-// var x = setInterval(function() {
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-//     // Get today's date and time
-//     var now = new Date().getTime();
-      
-//     // Find the distance between now and the count down date
-//     var distance = countDownDate - now;
-      
-//     // Time calculations for days, hours, minutes and seconds
-//     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-//     // Output the result in an element with id="demo"
-//     document.getElementById("countdown").innerHTML =  minutes + "m " + seconds + "s ";
-      
-//     // If the count down is over, write some text 
-//     if (distance < 0) {
-//       clearInterval(x);
-//       document.getElementById("countdown").innerHTML = "EXPIRED";
-//     }
-//   }, 1000);
-//
-
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = "Te quedan " + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+}
 
 //displays
 var displayCilindrada = document.getElementById("displayCilindrada");
@@ -51,8 +53,8 @@ function displayVariables(){
   }
   displayPrecio.innerHTML = price.toLocaleString('en-US');
   fecha.setHours(fecha.getHours() + parseFloat(radiovalue));
-  displayRadioValue.innerHTML = fecha.toDateString() + " " + "09:00";
-  displayMaxShipping.innerHTML = fecha.toDateString() + " " + fecha.getHours() + (fecha.getMinutes()<10?':0':':') + fecha.getMinutes();
+  displayRadioValue.innerHTML = fecha.toDateString() + " " + fecha.getHours() + (fecha.getMinutes()<10?':0':':') + fecha.getMinutes();
+  displayMaxShipping.innerHTML = fecha.toDateString() + " 18:00";
 
   if (radiovalue == "72"){
     shippingPrice = "0$";
@@ -92,6 +94,7 @@ function cambioClase1 (){
   cilindrada = document.getElementById("engineCapacity").value;
   console.log(cilindrada);
   console.log(color);
+  reloj();
 }
 var nextProfile = document.getElementById("next-profile");
 nextProfile.addEventListener("click",cambioClase2);
