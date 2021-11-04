@@ -1,3 +1,9 @@
+:root{
+    --color-principal: burlywood;
+    --color-secundario: rgb(255, 255, 255); 
+    --color-terciario: rgb(233, 189, 123);
+    --color-texttitulo: white;
+}
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +17,10 @@ header {
     border-radius: 0 0 85% 85% / 30%;
     background-position: 50% 50%; 
     background-image: url(https://www.vagabondesss.com/wp-content/uploads/2016/07/motorcycle-road-trip-tips.jpg);
+}
+body{
+    height:100vh;
+    background: linear-gradient(to bottom, white, var(--color-principal));
 }
 #titProduct{
     color: black;
@@ -62,18 +72,51 @@ nav ul li a:hover{
     color: #444;
 }
 /*formulario*/
-.usernm{
-    width:15%;
-    text-align:center;
-   
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: burlywood;
-    margin-left: 40%;
+#profile-page{
+    margin-top: 5%;
+    height: 80%;
 }
-
+.usernm{
+    display:grid;
+    grid-template: auto;
+    width:70%;
+    text-align:center;
+    font-size: 30px;
+    
+    background-color: burlywood;
+    box-shadow:  5px 5px 25px #222 ;
+    margin:auto;
+}
+.usernm input{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+button {
+    display: inline-block;
+    background-color: #cf8734;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  button:hover {
+    background-color: #8b5b1c;
+  }
+  #countryPhone{
+      width:60px;
+  }
+  
 .form{
     margin:10px 0 10px 0;
+    height: 30px;
+    width: 40%;
     border-radius: 8px;
 }
 

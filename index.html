@@ -74,22 +74,19 @@
     <!-- profile page -->
     <section id = "profile-page" class="ocultar">
         <form method="post" action="./script.js" target="_blank" class ="usernm">
-            <div>
-                <label>Username</label><br>
+            
+                <label>Username</label>
                 <input type="text" id="username" class="form" pattern="[a-z]{5,20}"required autocomplete >
-            </div>
-            <div>
-                <label>Email</label><br>
+           
+                <label>Email</label>
                 <input type="email" id="email" class="form"  required autocomplete>
-            </div>
-            <div>
-                <label>Password</label><br>
+            
+                <label>Password</label>
                 <input type="password" id="password" class="form" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required >
-            </div>
-            <div>
-                <label>Confirm Password</label><br>
+            
+                <label>Confirm Password</label>
                 <input type="password" id="confirm-password" class="form" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required>
-            </div>
+            
            
           <div>
             <button >Clear form</button>
@@ -137,11 +134,11 @@
             <div>
                 <label>Phone</label><br>
                 <select name="countryPhone" id="countryPhone" class="form"  required>
-                    <option>AND</option>
-                    <option>ESP</option>
-                    <option>FRA</option>
-                    <option>DEU</option>
-                    <option>GRC</option>
+                    <option value="376">AND</option>
+                    <option value="34">ESP</option>
+                    <option value="33">FRA</option>
+                    <option value="49">DEU</option>
+                    <option value="30">GRC</option>
                 </select>
                 <input type="text" id="phone" pattern="{1,9}" class="form"  required autocomplete>
             </div>
