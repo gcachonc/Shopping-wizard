@@ -54,23 +54,23 @@ function displayVariables(){
   else if(cilindrada == "1200cc"){
     price = "16999";
   }
-  displayPrecio.innerHTML = price.toLocaleString('en-US');
+  displayPrecio.innerHTML = price.toLocaleString('en-US') + " $";
   fecha.setHours(fecha.getHours() + parseFloat(radiovalue));
   displayRadioValue.innerHTML = fecha.toDateString() + " " + fecha.getHours() + (fecha.getMinutes()<10?':0':':') + fecha.getMinutes();
   displayMaxShipping.innerHTML = fecha.toDateString() + " 18:00";
 
   if (radiovalue == "72"){
-    shippingPrice = "0$";
+    shippingPrice = "0 $";
   }
   else if (radiovalue == "48"){
-    shippingPrice = "49.99$";
+    shippingPrice = "49.99 $";
   }
   else if (radiovalue == "24"){
-    shippingPrice = "99.99$";
+    shippingPrice = "99.99 $";
   }
   displayShippingPrice.innerHTML = shippingPrice;
   totalPrice = parseFloat(price) + parseFloat(shippingPrice);
-  displayTotalPrice.innerHTML = totalPrice.toLocaleString('en-US');
+  displayTotalPrice.innerHTML = totalPrice.toLocaleString('en-US') + " $";
 
 }
 
@@ -188,3 +188,17 @@ function clearForm3(){
   radio.checked = false;
   document.getElementById("messagetext").value = "";
 }
+var btnAudio = document.getElementById("btnFin")
+btnAudio.addEventListener("click",congra)
+
+var displayFinish = document.getElementById("congratulation")
+
+function congra(){
+  displayFinish.innerHTML= "Congratulation your Purcharse is finished!!";
+  displayFinish.style.fontSize= "80px";
+  displayFinish.style.color= "black";
+  displayFinish.style.textAlign= "center";
+  displayFinish.style.fontWeight = "bold";
+  displayFinish.style.marginTop= "50px"
+}
+
