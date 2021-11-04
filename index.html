@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/stylesjuan.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Document</title>
-    <script src="/script.js" defer></script>
     <script src="/home-page.js" defer></script>
     <script src="/cambioPaginas.js" defer></script>
     <script src="/variables.js" defer></script>
@@ -48,9 +47,9 @@
                     <img class = "img-small" id = "img_4" src= "https://i.ibb.co/86W7bX1/blanca-Trasera.jpg" alt="moto de frente">
                 </a>
             </div>
-            <button class = "carousel-button" id="retroceder"><i class="fas fa-chevron-left"></i></button>
+            <a class = "carousel-button" id="retroceder"><i class="fas fa-chevron-left"></i></a>
             <div id="imagen"></div>
-            <button class = "carousel-button" id="avanzar"><i class="fas fa-chevron-right"></i></button>
+            <a class = "carousel-button" id="avanzar"><i class="fas fa-chevron-right"></i></a>
             <div class = "prices-container">
                 <h2>Price</h2>
                 <p>Desde 14,999.00$</p>
@@ -59,7 +58,6 @@
                         <option value="900cc" >900cc (14.999$)</option>
                         <option value="1200cc">1200cc (16.999$)</option>
                     </select>
-                    <input type="submit" value="Submit">
                 </form>
                 <div class="color-select">
                     <button class = "button-colors" id = "blancos" type="button" onclick="fotosBlancas()"></button>
@@ -74,37 +72,43 @@
     </section>
     <!-- profile page -->
     <section id = "profile-page" class="ocultar">
-        <form method="post" action="./script.js" target="_blank" class ="usernm">
-            
+        <div class="degraded">
+        <form method="post" target="_blank" class ="usernm" id = "fvalida" onsubmit="event.preventDefault();">
+            <h1>Profile</h1>
+               
+            <div class="container-profile">
                 <label>Username</label>
-                <input type="text" id="username" class="form" pattern="[a-z]{5,20}"required autocomplete >
+                <input type="text" id="username" class="form" pattern="[a-z]{5,20}" placeholder = "no uppercase and simbols" required autocomplete >
            
                 <label>Email</label>
-                <input type="email" id="email" class="form"  required autocomplete>
+                <input type="email" id="email" class="form" placeholder="name@domain.com" required autocomplete>
             
                 <label>Password</label>
-                <input type="password" id="password" class="form" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required >
+                <input type="password" id="password" class="form" placeholder= "uppercase,downcase,number and simbol" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required >
             
                 <label>Confirm Password</label>
-                <input type="password" id="confirm-password" class="form" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required>
+                <input type="password" id="confirm-password" class="form" placeholder = "same password"pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required>
             
-           
+           </div>
           <div>
             <button >Clear form</button>
             <button type="submit" id ="next-profile">Next</button>
         </div>
           </form>
+        </div>
         </section>
     <!-- Address page -->
     <section id= "address-page" class = "ocultar">
-        <form method="post" action="./script.js" target="_blank" class = "usernm">
+        <div class="degraded">
+            <form method="post" target="_blank" class = "usernm" onsubmit="event.preventDefault();">
+            <h1>Address</h1>
             <div>
                 <label>First name</label><br>
-                <input type="text" id="firstName" pattern="[a-z]{1,20}" class="form"  required autocomplete >
+                <input type="text" id="firstName" pattern="[a-zA-Z]{1,20}" class="form" placeholder="Pepito" required autocomplete >
             </div>
             <div>
                 <label>Last name</label><br>
-                <input type="text" id="lastName" pattern="[a-z]{1,20}" class="form"  required autocomplete>
+                <input type="text" id="lastName" pattern="[a-zA-Z]{1,20}" class="form" placeholder="Sanchez"  required autocomplete>
             </div>
             <div>
                 <label>Birthday</label><br>
@@ -112,15 +116,15 @@
             </div>
             <div>
                 <label>Address 1</label><br>
-                <input type="text" id="address1" pattern="{1,50}" class="form"  required autocomplete>
+                <input type="text" id="address1" pattern="{1,50}" class="form" placeholder="c/ ramon ramirez" required autocomplete>
             </div>
             <div>
                 <label>Address 2</label><br>
-                <input type="text" id="address2" pattern="{1,50}" class="form" >
+                <input type="text" id="address2" pattern="{1,50}" placeholder = "No es obligatorio" class="form" >
             </div>
             <div>
                 <label>Postal code</label><br>
-                <input type="number" id="postalCode" pattern="[0-9]{1,5}" class="form"  required autocomplete>
+                <input type="number" id="postalCode" pattern="[0-9]{1,5}" class="form" placeholder="28016" required autocomplete>
             </div>
             <div>
                 <label>Country</label><br>
@@ -141,23 +145,21 @@
                     <option value="49">DEU</option>
                     <option value="30">GRC</option>
                 </select>
-                <input type="text" id="phone" pattern="{1,9}" class="form"  required autocomplete>
+                <input type="text" id="phone" pattern="{1,9}" class="form" placeholder="608976931" required autocomplete>
             </div>
             <div>
                 <button >Clear form</button>
                 <button type="submit" id="Next-Address">Next</button>
             </div>
         </form>
+        </div>
         </section>
 <!-- Shipping------------------------------------------------------------------------------->
     <section id ="shipping-page" class="ocultar">
+    <div class="degraded">
+        <div class="container-shipping">
+            <h1>Shipping</h1>
         <div class="shipping2" >
-            <!-- <h3 class="purchase" > Shipping type</h3>
-                <select name="" id="radioBtn"  class="ocultar">
-                    <input type="radio" name="send" value="72"  > Free shipment (72H)
-                    <input type="radio" name="send" value="48"> Extra shipping (48H)4,99
-                    <input type="radio" name="send" value="24"> Premium (24H) <b>9,99</b>
-                </select> -->
             <div class="formContainer">
                 <input type="radio" name="send" value="72" id="radioBtn1" > Free shipment (72H)
             </div>
@@ -177,9 +179,11 @@
             <input type="file">
         </div>
         <div>
-            <button type="submit" id="btnShipping">Next</button>
             <button >Clear form</button>
+            <button type="submit" id="btnShipping">Next</button>
         </div>
+    </div>
+</div>
     </section>
 
 <!-- Finish ------------------------------------------------------------------------------->
