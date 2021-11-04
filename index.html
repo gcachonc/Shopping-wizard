@@ -48,9 +48,9 @@
                     <img class = "img-small" id = "img_4" src= "https://i.ibb.co/86W7bX1/blanca-Trasera.jpg" alt="moto de frente">
                 </a>
             </div>
-            <button class = "carousel-button" id="retroceder"><i class="fas fa-chevron-left"></i></button>
+            <a class = "carousel-button" id="retroceder"><i class="fas fa-chevron-left"></i></a>
             <div id="imagen"></div>
-            <button class = "carousel-button" id="avanzar"><i class="fas fa-chevron-right"></i></button>
+            <a class = "carousel-button" id="avanzar"><i class="fas fa-chevron-right"></i></a>
             <div class = "prices-container">
                 <h2>Price</h2>
                 <p>Desde 14,999.00$</p>
@@ -59,7 +59,6 @@
                         <option value="900cc" >900cc (14.999$)</option>
                         <option value="1200cc">1200cc (16.999$)</option>
                     </select>
-                    <input type="submit" value="Submit">
                 </form>
                 <div class="color-select">
                     <button class = "button-colors" id = "blancos" type="button" onclick="fotosBlancas()"></button>
@@ -74,8 +73,9 @@
     </section>
     <!-- profile page -->
     <section id = "profile-page" class="ocultar">
+        <div class="degraded">
         <form method="post" action="./script.js" target="_blank" class ="usernm">
-            
+            <h1>Profile</h1>
                 <label>Username</label>
                 <input type="text" id="username" class="form" pattern="[a-z]{5,20}"required autocomplete >
            
@@ -94,10 +94,13 @@
             <button type="submit" id ="next-profile">Next</button>
         </div>
           </form>
+        </div>
         </section>
     <!-- Address page -->
     <section id= "address-page" class = "ocultar">
+        <div class="degraded">
         <form method="post" action="./script.js" target="_blank" class = "usernm">
+            <h1>Address</h1>
             <div>
                 <label>First name</label><br>
                 <input type="text" id="firstName" pattern="[a-z]{1,20}" class="form"  required autocomplete >
@@ -148,16 +151,14 @@
                 <button type="submit" id="Next-Address">Next</button>
             </div>
         </form>
+        </div>
         </section>
 <!-- Shipping------------------------------------------------------------------------------->
     <section id ="shipping-page" class="ocultar">
+    <div class="degraded">
+        <div class="container-shipping">
+            <h1>Shipping</h1>
         <div class="shipping2" >
-            <!-- <h3 class="purchase" > Shipping type</h3>
-                <select name="" id="radioBtn"  class="ocultar">
-                    <input type="radio" name="send" value="72"  > Free shipment (72H)
-                    <input type="radio" name="send" value="48"> Extra shipping (48H)4,99
-                    <input type="radio" name="send" value="24"> Premium (24H) <b>9,99</b>
-                </select> -->
             <div class="formContainer">
                 <input type="radio" name="send" value="72" id="radioBtn1" > Free shipment (72H)
             </div>
@@ -177,9 +178,11 @@
             <input type="file">
         </div>
         <div>
-            <button type="submit" id="btnShipping">Next</button>
             <button >Clear form</button>
+            <button type="submit" id="btnShipping">Next</button>
         </div>
+    </div>
+</div>
     </section>
 
 <!-- Finish ------------------------------------------------------------------------------->
