@@ -163,3 +163,18 @@ function cambioClase4 (){
   console.log(radiovalue);
   displayVariables();
 }
+
+var btnAudio = document.getElementById("btnFin")
+btnAudio.addEventListener("click",congra)
+
+var displayFinish = document.getElementById("congratulation")
+
+function congra(){
+  displayFinish.innerHTML= "Congratulation your Purcharse is finished!!";
+  displayFinish.style.fontSize= "80px";
+  displayFinish.style.color= "black";
+  displayFinish.style.textAlign= "center";
+  displayFinish.style.fontWeight = "bold";
+  displayFinish.style.marginTop= "50px"
+}
+
