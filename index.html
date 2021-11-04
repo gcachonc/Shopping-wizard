@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/stylesjuan.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <script src="/home-page.js" defer></script>
     <script src="/cambioPaginas.js" defer></script>
@@ -73,7 +74,7 @@
     <!-- profile page -->
     <section id = "profile-page" class="ocultar">
         <div class="degraded">
-        <form method="post" target="_blank" class ="usernm" id = "fvalida" onsubmit="event.preventDefault();">
+        <form method="post" target="_blank" class ="usernm" id = "form1" onsubmit="event.preventDefault();">
             <h1>Profile</h1>
                
             <div class="container-profile">
@@ -91,7 +92,7 @@
             
            </div>
           <div>
-            <button >Clear form</button>
+            <button type = "button" id = "clearForm1">Clear form</button>
             <button type="submit" id ="next-profile">Next</button>
         </div>
           </form>
@@ -100,7 +101,7 @@
     <!-- Address page -->
     <section id= "address-page" class = "ocultar">
         <div class="degraded">
-            <form method="post" target="_blank" class = "usernm" onsubmit="event.preventDefault();">
+            <form method="post" target="_blank" class = "usernm" id = "form2" onsubmit="event.preventDefault();">
             <h1>Address</h1>
             <div>
                 <label>First name</label><br>
@@ -148,7 +149,7 @@
                 <input type="text" id="phone" pattern="{1,9}" class="form" placeholder="608976931" required autocomplete>
             </div>
             <div>
-                <button >Clear form</button>
+                <button type = "button" id = "clearForm2">Clear form</button>
                 <button type="submit" id="Next-Address">Next</button>
             </div>
         </form>
@@ -159,7 +160,7 @@
     <div class="degraded">
         <div class="container-shipping">
             <h1>Shipping</h1>
-        <div class="shipping2" >
+        <div class="shipping2" id = "form3">
             <div class="formContainer">
                 <input type="radio" name="send" value="72" id="radioBtn1" > Free shipment (72H)
             </div>
@@ -172,14 +173,14 @@
         </div>
         <div class="mensageDiv">
             <p class="TextNorm">Write the message</p>
-            <textarea name="Message" id="messagetext" cols="35" rows="15" ></textarea>
+            <textarea name="Message" id="messagetext" cols="35" rows="15" placeholder="write here any questions you have for us..."></textarea>
         </div>
         <div class="containerDropp">
             <p>Add your image</p>
             <input type="file">
         </div>
         <div>
-            <button >Clear form</button>
+            <button type = "button" id = "clearForm3">Clear form</button>
             <button type="submit" id="btnShipping">Next</button>
         </div>
     </div>
@@ -193,7 +194,7 @@
                 <div class="descriptiomProduct">
                     <div class="intDescriptionProduct">
                         <div class="divimg" >
-                            <video class="videoFin" src="/assets/Proyecto sin título.mp4"width="640" height="480"  loop autoplay></video> 
+                            <video class="videoFin" src="/assets/Proyecto sin título.mp4"width="640" height="480"  loop autoplay playsinline></video> 
                         </div>
                         <div class="descriptionContainer">
                             <h2 class="purchase">Your Purchase</h2>
@@ -230,5 +231,13 @@
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <img id = "imgFooter" src="assets/logo-harley.jpg" alt="logo harley">
+        <nav>
+            <a href="https://twitter.com/?lang=ES" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+        </nav>
+    </footer>
 </body>
 </html>

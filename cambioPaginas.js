@@ -1,6 +1,9 @@
 // Set the date we're counting down to
+var divReloj = document.getElementById("demo");
+
 function reloj(){
 var countDownDate = new Date().getTime() + 300000;
+
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -92,8 +95,12 @@ function cambioClase1 (){
   tituloProduct.style.color ="white";
   tituloProfile.style.color ="black";
   cilindrada = document.getElementById("engineCapacity").value;
-  console.log(cilindrada);
-  console.log(color);
+  divReloj.style.border = "1px solid black";
+  divReloj.style.width = "90px";
+  divReloj.style.backgroundColor = "#EADACA";
+  divReloj.style.marginLeft = "10px";
+  divReloj.style.fontSize = "20px";
+  divReloj.style.display = "absolute";
   reloj();
 }
 var nextProfile = document.getElementById("next-profile");
@@ -162,4 +169,22 @@ function cambioClase4 (){
   console.log(cilindrada);
   console.log(radiovalue);
   displayVariables();
+}
+
+document.getElementById("clearForm1").addEventListener("click", clearForm1);
+
+function clearForm1(){
+  document.getElementById("form1").reset();
+}
+document.getElementById("clearForm2").addEventListener("click", clearForm2);
+
+function clearForm2(){
+  document.getElementById("form2").reset();
+}
+document.getElementById("clearForm3").addEventListener("click", clearForm3);
+
+function clearForm3(){
+  var radio = document.querySelector('input[type=radio][name=send]:checked');
+  radio.checked = false;
+  document.getElementById("messagetext").value = "";
 }

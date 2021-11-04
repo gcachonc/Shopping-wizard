@@ -85,7 +85,7 @@ h1{
 /*formulario*/
 #profile-page{
     margin-top: 5%;
-    height: 80%;
+    height: 67vh;
 }
 .usernm{
     display:grid;
@@ -327,4 +327,52 @@ button:hover {
     margin-left:auto;
     margin-right:auto;
     text-align:center;
+}
+
+/*footer*/
+footer{
+    background-color: #453B39;
+    height: 100px;
+}
+#imgFooter{
+    height: 60px;
+    margin: auto;
+    width: 60px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.footer nav{
+    padding-right: 5%;
+}
+footer .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    padding-right: 1%;
+    padding-top: 2.5%;
+}
+
+.fa-facebook{
+    background-color: #453B39;
+    color: whitesmoke;
+}
+.fa-twitter{
+    background-color: #453B39;
+    color: whitesmoke;
+}
+.fa-instagram{
+    background-color: #453B39;
+    color: whitesmoke;
+}
+
+#product-page{
+    height: 76vh;
+}
+
+#shipping-page{
+    height: 79vh;
 }
